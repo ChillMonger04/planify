@@ -1,0 +1,413 @@
+:root {
+    --primary-clr: #5A96E3;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+  }
+  /* nice scroll bar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-clr);
+    border-radius: 50px;
+  }
+  
+  body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F1E5;
+  }
+
+  .intro-line{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -950px;
+    font-size: 1.5em;
+  }
+
+  .soln-line{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -850px;
+    font-size: 1em;
+  }
+
+  #mouse{
+    position: fixed;
+  }
+
+  section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #5A96E3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* This is to form the circle */
+    clip-path: circle(0px at center center);
+  }
+
+  .inner-text{
+    position: fixed;
+    top: 40%;
+    transform: translateY(-50%);
+    /* To get the statement in one line */
+    white-space: nowrap;
+    /* To hide it before scrolling */
+    z-index: 1;
+    font-size: 10vw;
+    font-weight: bolder;
+    color: #F7F1E5;
+    text-align: center;
+    width: 100%;
+    cursor: default;
+  }
+
+  .inner-inner-text{
+    position: fixed;
+    top: 60%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 7vw;
+    font-weight: bolder;
+    color: #f58c9c;
+    text-align: center;
+    width: 100%;
+    cursor: default;
+  }
+
+  .container{
+    position: relative;
+    margin-top: 220vh;
+    background-color: #5A96E3;
+    padding: 100px;
+    padding-bottom: 15px;
+    color: #F7F1E5;
+  }
+
+  .container h2{
+    font-size: 5rem;
+  }
+  
+  
+  nav {
+    position: absolute;
+    top: 0%;
+    display: flex;
+    width: 100%;
+    border-bottom: 2.2px solid;
+    border-color: #1E2435;
+    background: var(--primary-clr);
+  }
+  
+  #main-logo .pro_name{
+    font-family: 'Bungee', cursive;
+    font-weight: bolder;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .nav-link{
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.03rem;
+    color:  #000000;
+    cursor: pointer;
+  }
+  
+  .nav-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    display: block;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #fff;
+  }
+  
+  
+  .nav-section-1 {
+    padding: 1.5rem 2rem 1rem 1.8rem;
+    display: flex;
+    /* To add the gap between elements */
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .nav-section {
+    padding: 2rem 3rem;
+    /* (top,bottom) , (left,right) */
+    display: flex;
+    /* To add the gap between elements */
+    gap: 1.2rem;
+    border-left: 2.2px solid;
+    border-color: #000000;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .nav-section-2 {
+    padding: 2rem 2.3rem;
+    display: flex;
+    /* To add the gap between elements */
+    gap: 3.6rem;
+    border-left: 2.2px solid;
+    border-color: #1E2435;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  #main-logo, #main-links {
+    flex-basis: calc(100%/3);
+    /* As first two takes 1/3rd of the width*/
+  }
+  
+  #main-socials, #main-contact {
+    flex-grow: 1;
+  }
+  
+  .myID {
+    width: 47px;
+    height: 47px;
+    border-radius: 30%;
+  }
+
+  .myID-mouse{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -800px;
+    width: 47px;
+    height: 47px;
+  }
+
+  .pro_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gloock', serif;
+    font-size: 30rem;
+  }
+
+  .intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .btn{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.5% 30%;
+    border: 1px solid;
+    background-color: #f58c9c;
+    border-color: #F7F1E5;
+    font-family: 'Bungee', cursive;
+    font-weight: bolder;
+  }
+
+  .btn:hover{
+    background-color: #F7F1E5;
+    color: #f58c9c;
+    border-color: #f58c9c;
+  }
+
+/* Navbar styles for screens up to 1175px */
+@media screen and (max-width: 1190px) {
+    nav {
+      height: 75px;
+      padding-top: 4px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    #main-logo .pro_name {
+      font-size: 1.1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    #main-logo img {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+    }
+  
+    .dropdown {
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .dropdown .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 70%; /* Adjust the top position as needed */
+      left: 520%;
+      width: 100%; /* Set the width to match the navbar */
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      text-align: center;
+      color: #5A96E3;
+    }
+  
+    .dropdown .dropdown-menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .dropdown .dropdown-menu li {
+      padding: 10px;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #5A96E3;
+    }
+  
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      display: block;
+    }
+  
+    .dropbtn {
+      border-radius: 12px;
+      position: relative;
+      left: 310px; /* Adjust this value as needed */
+      bottom: 0px;
+      padding: 2px 5px;
+      cursor: pointer; /* Add cursor pointer */
+    }
+  
+    /* Add hover state for the dropdown button */
+    .dropdown:hover .dropbtn {
+      background-color: #eee;
+    }
+  
+    #main-links {
+      flex-basis: 70%;
+      border-right: none;
+      border-left: none;
+    }
+  
+    #main-links .nav-link {
+      display: none;
+      width: 0;
+    }
+  
+    #main-links .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+  
+    #main-links .dropdown::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      height: 100%;
+      width: 2px;
+      background-color: var(--primary-clr);
+    }
+  
+    #main-social,
+    #main-contact {
+      display: none;
+    }
+  
+    #main-links::after {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 930px) {
+    .dropbtn {
+      left: 240px;
+    }
+  
+    .dropdown .dropdown-menu{
+      display: none;
+      position: absolute;
+      top: 70%; /* Adjust the top position as needed */
+      left: 280%;
+      width: 100%; /* Set the width to match the navbar */
+    }
+  
+    /* Make the dropdown menu visible on button click */
+    .dropdown.show .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 760px) {
+    .dropbtn {
+      left: 120px;
+    }
+  
+    .dropdown .dropdown-menu{
+      display: none;
+      position: absolute;
+      top: 70%; /* Adjust the top position as needed */
+      left: -42px;
+      width: 100%; /* Set the width to match the navbar */
+    }
+  
+    /* Make the dropdown menu visible on button click */
+    .dropdown.show .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  /* Hide the menu button for screens larger than 1190px */
+  @media screen and (min-width: 1191px) {
+    .dropbtn {
+      display: none;
+    }
+    
+    #main-links .dropdown {
+      display: none;
+    }
+}
+
+
+
+ 

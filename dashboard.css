@@ -1,0 +1,348 @@
+:root {
+    --primary-clr: #5A96E3;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+  }
+  /* nice scroll bar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-clr);
+    border-radius: 50px;
+  }
+  
+  body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F1E5;
+  }
+
+  nav {
+    position: absolute;
+    top: 0%;
+    display: flex;
+    width: 100%;
+    border-bottom: 2.2px solid;
+    border-color: #1E2435;
+    background: var(--primary-clr);
+  }
+  
+  #main-logo .pro_name{
+    font-family: 'Bungee', cursive;
+    font-weight: bolder;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .nav-link{
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.03rem;
+    color:  #000000;
+    cursor: pointer;
+  }
+  
+  .nav-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    display: block;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #fff;
+  }
+  
+  
+  .nav-section-1 {
+    padding: 1.5rem 2rem 1rem 1.8rem;
+    display: flex;
+    /* To add the gap between elements */
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .nav-section {
+    padding: 2rem 3rem;
+    /* (top,bottom) , (left,right) */
+    display: flex;
+    /* To add the gap between elements */
+    gap: 1.2rem;
+    border-left: 2.2px solid;
+    border-color: #000000;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .nav-section-2 {
+    padding: 2rem 2.3rem;
+    display: flex;
+    /* To add the gap between elements */
+    gap: 3.6rem;
+    border-left: 2.2px solid;
+    border-color: #1E2435;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  #main-logo, #main-links {
+    flex-basis: calc(100%/3);
+    /* As first two takes 1/3rd of the width*/
+  }
+  
+  #main-socials, #main-contact {
+    flex-grow: 1;
+  }
+  
+  .myID {
+    width: 47px;
+    height: 47px;
+    border-radius: 30%;
+  }
+
+
+  .dashboard {
+    position: relative;
+    width: 1300px;
+    min-height: 700px;
+    margin-top: 130px;
+    margin-bottom: 70px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2.2px solid;
+    border-color: #000000;
+    padding: 40px 60px;
+    color: #5A96E3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .dashboard h1{
+    font-size: 4rem;
+  }
+  
+  /* .dashboard i{
+    color: #f58c9c;
+  } */
+  
+  span .seize{
+    color: #f58c9c;
+  }
+
+  .events-container {
+    margin-top: 20px;
+  }
+  
+  .events-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 7px;
+  }
+  
+  .event-item {
+    margin-top: 10px;
+    margin-bottom: 17px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #fdf7ee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-item .event-title {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .event-item .event-time {
+    font-style: italic;
+    color: #777;
+  }
+  
+  .event-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+
+
+/* Navbar styles for screens up to 1175px */
+@media screen and (max-width: 1190px) {
+    nav {
+      height: 75px;
+      padding-top: 4px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    #main-logo .pro_name {
+      font-size: 1.1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    #main-logo img {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+    }
+  
+    .dropdown {
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .dropdown .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 70%; /* Adjust the top position as needed */
+      left: 520%;
+      width: 100%; /* Set the width to match the navbar */
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      text-align: center;
+      color: #5A96E3;
+    }
+  
+    .dropdown .dropdown-menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .dropdown .dropdown-menu li {
+      padding: 10px;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #5A96E3;
+    }
+  
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      display: block;
+    }
+  
+    .dropbtn {
+      border-radius: 12px;
+      position: relative;
+      left: 310px; /* Adjust this value as needed */
+      bottom: 0px;
+      padding: 2px 5px;
+      cursor: pointer; /* Add cursor pointer */
+    }
+  
+    /* Add hover state for the dropdown button */
+    .dropdown:hover .dropbtn {
+      background-color: #eee;
+    }
+  
+    #main-links {
+      flex-basis: 70%;
+      border-right: none;
+      border-left: none;
+    }
+  
+    #main-links .nav-link {
+      display: none;
+      width: 0;
+    }
+  
+    #main-links .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+  
+    #main-links .dropdown::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      height: 100%;
+      width: 2px;
+      background-color: var(--primary-clr);
+    }
+  
+    #main-social,
+    #main-contact {
+      display: none;
+    }
+  
+    #main-links::after {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 930px) {
+    .dropbtn {
+      left: 240px;
+    }
+  
+    .dropdown .dropdown-menu{
+      display: none;
+      position: absolute;
+      top: 70%; /* Adjust the top position as needed */
+      left: 280%;
+      width: 100%; /* Set the width to match the navbar */
+    }
+  
+    /* Make the dropdown menu visible on button click */
+    .dropdown.show .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 760px) {
+    .dropbtn {
+      left: 120px;
+    }
+  
+    .dropdown .dropdown-menu{
+      display: none;
+      position: absolute;
+      top: 70%; /* Adjust the top position as needed */
+      left: -42px;
+      width: 100%; /* Set the width to match the navbar */
+    }
+  
+    /* Make the dropdown menu visible on button click */
+    .dropdown.show .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  /* Hide the menu button for screens larger than 1190px */
+  @media screen and (min-width: 1191px) {
+    .dropbtn {
+      display: none;
+    }
+    
+    #main-links .dropdown {
+      display: none;
+    }
+}
